@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0" version="26.0.5">
   <diagram name="Page-1" id="wPwewPDh1s2KKw-gjsIc">
-    <mxGraphModel dx="1900" dy="1666" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="6100" dy="3930" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="#D4E1F5" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -24,15 +24,6 @@
         </mxCell>
         <mxCell id="ft_wze93Pia4Ai2a97aL-7" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;validation&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" vertex="1" parent="1">
           <mxGeometry x="-752" y="-842" width="96" height="31" as="geometry" />
-        </mxCell>
-        <mxCell id="ft_wze93Pia4Ai2a97aL-8" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;Concrete&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" vertex="1" parent="1">
-          <mxGeometry x="330" y="-697" width="90" height="31" as="geometry" />
-        </mxCell>
-        <mxCell id="ft_wze93Pia4Ai2a97aL-9" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;OrderContext&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; __construct(orderId): &lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; orderID: &lt;br/&gt; instances: &lt;br/&gt; orderId: &lt;br/&gt; state: &lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; loadStateFromDatabse(orderId): &lt;br/&gt; getStatus(): &lt;br/&gt; setState(state): &lt;br/&gt; proceed(): &lt;br/&gt; getInstance(orderId): &lt;br/&gt; saveStateToDB(): &lt;br/&gt; loadStateFromDatabase(): &lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" vertex="1" parent="1">
-          <mxGeometry x="330" y="-1040" width="208" height="298" as="geometry" />
-        </mxCell>
-        <mxCell id="ft_wze93Pia4Ai2a97aL-10" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;OrderState&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; getStatus(): &lt;br/&gt; proceed(context): &lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" vertex="1" parent="1">
-          <mxGeometry x="583" y="-1040" width="129" height="82" as="geometry" />
         </mxCell>
         <mxCell id="ft_wze93Pia4Ai2a97aL-11" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;CreditCardPaymentModel&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; PAYMENT_METHOD: &lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; __construct(amount, currency, paymentDate, paymentMethod, cardNumber, expiryDate, cvv): &lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; expiryDate: &lt;br/&gt; cvv: &lt;br/&gt; amount: &lt;br/&gt; currency: &lt;br/&gt; cardNumber: &lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; getCardNumber(): &lt;br/&gt; getExpiryDate(): &lt;br/&gt; getCvv(): &lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" vertex="1" parent="1">
           <mxGeometry x="-484.5" y="-328" width="369" height="308" as="geometry" />
@@ -128,6 +119,43 @@
             <Array as="points">
               <mxPoint x="-638" y="1537" />
               <mxPoint x="-460" y="1537" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ft_wze93Pia4Ai2a97aL-32" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;Concrete&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="330" y="-697" width="90" height="31" as="geometry" />
+        </mxCell>
+        <mxCell id="ft_wze93Pia4Ai2a97aL-36" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="ft_wze93Pia4Ai2a97aL-33" target="ft_wze93Pia4Ai2a97aL-32">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ft_wze93Pia4Ai2a97aL-33" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;OrderContext&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; __construct(orderId): &lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; orderID: &lt;br/&gt; instances: &lt;br/&gt; orderId: &lt;br/&gt; state: &lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; loadStateFromDatabse(orderId): &lt;br/&gt; getStatus(): &lt;br/&gt; setState(state): &lt;br/&gt; proceed(): &lt;br/&gt; getInstance(orderId): &lt;br/&gt; saveStateToDB(): &lt;br/&gt; loadStateFromDatabase(): &lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="330" y="-1040" width="208" height="298" as="geometry" />
+        </mxCell>
+        <mxCell id="ft_wze93Pia4Ai2a97aL-34" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;OrderState&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; getStatus(): &lt;br/&gt; proceed(context): &lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="583" y="-1040" width="129" height="82" as="geometry" />
+        </mxCell>
+        <mxCell id="ft_wze93Pia4Ai2a97aL-37" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;OrderState&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; getStatus(): &lt;br/&gt; proceed(context): &lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="312.5" y="-560" width="129" height="82" as="geometry" />
+        </mxCell>
+        <mxCell id="ft_wze93Pia4Ai2a97aL-38" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;PendingState&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; getStatus(): &lt;br/&gt; proceed(context): &lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="388.5" y="-434" width="129" height="82" as="geometry" />
+        </mxCell>
+        <mxCell id="ft_wze93Pia4Ai2a97aL-39" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;ProcessingState&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; getStatus(): &lt;br/&gt; proceed(context): &lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="232.5" y="-434" width="136" height="82" as="geometry" />
+        </mxCell>
+        <mxCell id="ft_wze93Pia4Ai2a97aL-40" value="" style="html=1;rounded=1;edgeStyle=orthogonalEdgeStyle;dashed=1;startArrow=none;endArrow=block;endSize=12;strokeColor=#008200;exitX=0.500;exitY=0.001;exitDx=0;exitDy=0;entryX=0.500;entryY=1.001;entryDx=0;entryDy=0;" edge="1" parent="1" source="ft_wze93Pia4Ai2a97aL-38" target="ft_wze93Pia4Ai2a97aL-37">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="453.5" y="-459" />
+              <mxPoint x="376.5" y="-459" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ft_wze93Pia4Ai2a97aL-41" value="" style="html=1;rounded=1;edgeStyle=orthogonalEdgeStyle;dashed=1;startArrow=none;endArrow=block;endSize=12;strokeColor=#008200;exitX=0.500;exitY=0.001;exitDx=0;exitDy=0;entryX=0.500;entryY=1.001;entryDx=0;entryDy=0;" edge="1" parent="1" source="ft_wze93Pia4Ai2a97aL-39" target="ft_wze93Pia4Ai2a97aL-37">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="300.5" y="-459" />
+              <mxPoint x="376.5" y="-459" />
             </Array>
           </mxGeometry>
         </mxCell>
