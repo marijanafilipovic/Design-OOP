@@ -7,6 +7,10 @@ class CreditCardPaymentModel extends PaymentModel
     private int $cardNumber;
     private string|mix $expiryDate;
     private int $cvv;
+
+    private double $amount;
+    private string $currency;
+    public const PAYMENT_METHOD = 'credit_card';
     public function __construct($amount, $currency, $paymentDate, $paymentMethod, $cardNumber, $expiryDate, $cvv)
     {
         parent::__construct($amount, $currency, $paymentDate, $paymentMethod);
