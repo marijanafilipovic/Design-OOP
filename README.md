@@ -10,7 +10,7 @@
 
 ### 4. **Singleton**
 
-### TO do **Event / Observer **
+### 5. Chain **Observer** Order Status / Product Invetory
 
 #### Key Points:
 - Abstracts the creation process of objects.
@@ -20,3 +20,8 @@
   The State pattern manages state transitions that affect behavior.
   The Singleton ensures shared resources like configuration are accessed consistently.
 - Programming logic and scalability
+
+### Flow_Diagram
+![Flow Diagram](https://raw.githubusercontent.com/marijanafilipovic/Design-OOP/master/Flow_Diagram.png)
+### UML Diagram
+

@@ -1,4 +1,5 @@
 <?php
+namespace PaymentStrategy\contracts;
 
 interface PaymentConfiguration
 {

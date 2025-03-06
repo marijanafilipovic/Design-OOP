@@ -1,5 +1,7 @@
 <?php
 
+namespace PaymentStrategy\contracts;
+
 interface PaymentServiceFactory
 {
     public function createPaymentService(): PaymentService;

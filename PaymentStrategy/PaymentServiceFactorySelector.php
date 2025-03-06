@@ -1,4 +1,5 @@
 <?php
+namespace PaymentStrategy;
 
 class PaymentServiceFactorySelector
 {

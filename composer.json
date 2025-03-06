@@ -1,0 +1,11 @@
+{
+    "name": "marijana/design-oop",
+    "description": "exercise patterns",
+    "autoload": {
+        "psr-4": {
+            "Design\\": "./"
+        }
+    },
+    "minimum-stability": "dev",
+    "require": {}
+}

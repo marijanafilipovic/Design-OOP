@@ -2,6 +2,8 @@
 
 namespace State;
 
+use Observer\OrderObserver;
+
 class OrderContext
 {
     private static array $instances = [];
@@ -24,25 +26,25 @@ class OrderContext
     private function loadStateFromDatabase(): void
     {
         // Fetch state from order db query
-        $stateFromDb = 'Processing';
+        $stateFromDb = 'Pending';
 
         $this->state = match ($stateFromDb) {
-            'Processing' => new ProcessingState(),
-            // Means Order has been created
-            // Validate Request before creating an Order has been done
-            // Processing class decide which behavior to integrate to call Payment
-            // Use Payment Strategy
-            // Change Order status
-            'Pending' => new PendingState(),
+//            'Processing' => new ProcessingState(),
+              'Pending' => new PendingState(),
+//             Means Order has been created
+//             Validate Request before creating an Order has been done
+//             Processing class decide which behavior to integrate to call Payment
+//             Use Payment Strategy
+//             Update Order status
             'Shipped' => new ShippedState(),
             'Delivered' => new DeliveredState(),
             default => throw new Exception("Undefiend state for: $stateFromDb"),
         };
     }
-
     public function proceed(): void
     {
         $this->state->proceed($this);
+        $this->notifyObservers();
         $this->saveStateToDatabase();
     }
 
@@ -56,18 +58,29 @@ class OrderContext
         $this->state = $state;
     }
 
-    private function loadStateFromDatabse(int $orderId): string
+    public function addObserver(OrderObserver $observer): void
     {
-        $fakeOrder = [
-                'orderId' => '123',
-                'state' => 'Pending',
-        ];
+        $this->observers[] = $observer;
+    }
+    public function removeObserver(OrderObserver $observer): void
+    {
+        $this->observers[] = array_filter($this->observers, fn($o) => $o !== $observer);
+    }
 
-        return $fakeOrder[$orderId] ?? 'Pending';
+    public function notifyObservers(): void
+    {
+        foreach ($this->observeres as $observer) {
+            $observer->update($this);
+        }
     }
 
     private function saveStateToDB(): void
     {
         echo "Order {$this->orderId} stated has been updated...";
+    }
+
+    public function getOrderId(): int
+    {
+        return $this->orderId;
     }
 }
