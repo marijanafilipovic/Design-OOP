@@ -34,21 +34,21 @@ jobs:
         run: |
           docker push ${{ secrets.DOCKER_USERNAME }}/design-oop:latest
 
-  # deploy:
-  #   name: Deploy to Production Server
-  #   runs-on: ubuntu-latest
-  #   needs: build
-  #   if: github.ref == 'refs/heads/main'
+  deploy:
+    name: Deploy to Production Server
+    runs-on: ubuntu-latest
+    needs: build
+    if: github.ref == 'refs/heads/main'
 
-  #   steps:
-  #     - name: Deploy via SSH
-  #       uses: appleboy/ssh-action@v0.1.10
-  #       with:
-  #         host: ${{ secrets.SSH_HOST }}
-  #         username: ${{ secrets.SSH_USER }}
-  #         password: ${{ secrets.SSH_PASS }}
-  #         script: |
-  #           docker pull ${{ secrets.DOCKER_USERNAME }}/design-oop:latest
-  #           docker stop symfony_app || true
-  #           docker rm symfony_app || true
-  #           docker run -d --name symfony_app -p 80:80 ${{ secrets.DOCKER_USERNAME }}/design-oop:latest
+    steps:
+      - name: Deploy via SSH
+        uses: appleboy/ssh-action@v0.1.10
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          password: ${{ secrets.SSH_PASS }}
+          script: |
+            docker pull ${{ secrets.DOCKER_USERNAME }}/design-oop:latest
+            docker stop symfony_app || true
+            docker rm symfony_app || true
+            docker run -d --name symfony_app -p 80:80 ${{ secrets.DOCKER_USERNAME }}/design-oop:latest
