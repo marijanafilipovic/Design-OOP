@@ -11,7 +11,7 @@ RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf
 # Set working directory
 WORKDIR /var/www/html
 
-# Install PHP extensions
+# Install PHP extensions and Composer
 RUN apt-get update && apt-get install -y \
     libfreetype6-dev \
     libjpeg62-turbo-dev \
@@ -25,8 +25,9 @@ RUN apt-get update && apt-get install -y \
     && pecl install redis xdebug \
     && docker-php-ext-enable redis xdebug \
     && rm -rf /var/lib/apt/lists/* \
+    && curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer \
     && curl -sS https://phar.phpunit.de/phpunit.phar -o /usr/local/bin/phpunit \
-    && chmod +x /usr/local/bin/phpunit
+    && chmod +x /usr/local/bin/composer /usr/local/bin/phpunit
 
 # Set PHP to use the production configuration
 RUN mv "$PHP_INI_DIR/php.ini-production" "$PHP_INI_DIR/php.ini" \
@@ -40,7 +41,4 @@ RUN chown -R www-data:www-data /var/www/html \
     && chmod -R 755 /var/www/html
 
 # Expose the Apache port
-EXPOSE 80
-
-# Start Apache in the foreground
-CMD ["apache2-foreground"]
+EXPOSE 
