@@ -24,7 +24,7 @@ RUN apt-get update && apt-get install -y \
     && docker-php-ext-install -j$(nproc) gd zip pdo pdo_mysql \
     && pecl install redis xdebug \
     && docker-php-ext-enable redis xdebug \
-    && rm -rf /var/lib/apt/lists/*
+    && rm -rf /var/lib/apt/lists/* \
     && curl -sS https://phar.phpunit.de/phpunit.phar -o /usr/local/bin/phpunit \
     && chmod +x /usr/local/bin/phpunit
 
