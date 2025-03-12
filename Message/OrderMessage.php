@@ -1,5 +1,5 @@
 <?php
-namespace Design\Observer;
+namespace Design\Message;
 
 class OrderMessage {
     private $orderId;

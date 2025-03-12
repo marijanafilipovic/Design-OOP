@@ -25,6 +25,8 @@ RUN apt-get update && apt-get install -y \
     && pecl install redis xdebug \
     && docker-php-ext-enable redis xdebug \
     && rm -rf /var/lib/apt/lists/*
+    && curl -sS https://phar.phpunit.de/phpunit.phar -o /usr/local/bin/phpunit \
+    && chmod +x /usr/local/bin/phpunit
 
 # Set PHP to use the production configuration
 RUN mv "$PHP_INI_DIR/php.ini-production" "$PHP_INI_DIR/php.ini" \
